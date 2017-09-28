@@ -9,13 +9,7 @@
 import Alamofire
 
 class ServiceManager {
-    
-    struct API {
-        static var baseUrl: URL {
-            return URL(string: "http://itunes.apple.com") ?? URL(fileURLWithPath: "")
-        }
-    }
-    
+
     static let shared = ServiceManager()
     
     var manager: Alamofire.SessionManager
@@ -28,5 +22,13 @@ class ServiceManager {
     
     func request(_ urlRequest: URLRequestConvertible) -> DataRequest {
         return manager.request(urlRequest)
+    }
+}
+
+extension ServiceManager {
+    struct API {
+        static var baseUrl: URL {
+            return URL(string: "http://itunes.apple.com") ?? URL(fileURLWithPath: "")
+        }
     }
 }
