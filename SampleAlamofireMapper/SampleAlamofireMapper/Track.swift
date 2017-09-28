@@ -8,6 +8,7 @@
 
 import ObjectMapper
 import Alamofire
+import PromiseKit
 
 class Track: Object {
     
@@ -52,6 +53,28 @@ extension Track {
         override func mapping(map: Map) {
             count <- map["resultCount"]
             tracks <- map["results"]
+        }
+    }
+}
+
+extension Track {
+    static func search(with key: String) -> Promise<[Track]> {
+        return Promise { (fulfil, reject) in
+            Router.search(with: key).request { (response: DataResponse<SearchResponse>) in
+                
+                guard response.error == nil else {
+                    reject(response.error!)
+                    return
+                }
+                
+                guard let tracks = response.value?.tracks else {
+                    let error = NSError(domain: "JSONResponseError", code: 3841, userInfo: nil)
+                    reject(error)
+                    return
+                }
+                
+                fulfil(tracks)
+            }
         }
     }
 }
