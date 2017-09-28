@@ -42,3 +42,16 @@ extension Track {
         }
     }
 }
+
+extension Track {
+    class SearchResponse: Object {
+        
+        var count = 0
+        var tracks: [Track]?
+        
+        override func mapping(map: Map) {
+            count <- map["resultCount"]
+            tracks <- map["results"]
+        }
+    }
+}
