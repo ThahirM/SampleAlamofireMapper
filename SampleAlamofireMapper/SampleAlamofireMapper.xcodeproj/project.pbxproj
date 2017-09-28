@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D2D82B261F7CDD28000CAEE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B251F7CDD28000CAEE5 /* AppDelegate.swift */; };
-		D2D82B281F7CDD28000CAEE5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B271F7CDD28000CAEE5 /* FirstViewController.swift */; };
-		D2D82B2A1F7CDD28000CAEE5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B291F7CDD28000CAEE5 /* SecondViewController.swift */; };
 		D2D82B2D1F7CDD28000CAEE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B2B1F7CDD28000CAEE5 /* Main.storyboard */; };
 		D2D82B2F1F7CDD28000CAEE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B2E1F7CDD28000CAEE5 /* Assets.xcassets */; };
 		D2D82B321F7CDD28000CAEE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B301F7CDD28000CAEE5 /* LaunchScreen.storyboard */; };
+		D2D82B401F7CDE84000CAEE5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B3F1F7CDE84000CAEE5 /* SearchViewController.swift */; };
 		F30AAE2912DACC63F5ECAD1B /* Pods_SampleAlamofireMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD6A0DD14BA81DAAC52D07D /* Pods_SampleAlamofireMapper.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +20,11 @@
 		9CD6A0DD14BA81DAAC52D07D /* Pods_SampleAlamofireMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleAlamofireMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D82B221F7CDD28000CAEE5 /* SampleAlamofireMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAlamofireMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D82B251F7CDD28000CAEE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2D82B271F7CDD28000CAEE5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D2D82B291F7CDD28000CAEE5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D2D82B2C1F7CDD28000CAEE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2D82B2E1F7CDD28000CAEE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2D82B311F7CDD28000CAEE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2D82B331F7CDD28000CAEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2D82B3F1F7CDE84000CAEE5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E374D42B2B145237798AFE60 /* Pods-SampleAlamofireMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAlamofireMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleAlamofireMapper/Pods-SampleAlamofireMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,14 +70,61 @@
 			isa = PBXGroup;
 			children = (
 				D2D82B251F7CDD28000CAEE5 /* AppDelegate.swift */,
-				D2D82B271F7CDD28000CAEE5 /* FirstViewController.swift */,
-				D2D82B291F7CDD28000CAEE5 /* SecondViewController.swift */,
+				D2D82B3D1F7CDE46000CAEE5 /* Extensions */,
+				D2D82B3C1F7CDE3B000CAEE5 /* Components */,
+				D2D82B3B1F7CDE33000CAEE5 /* Models */,
+				D2D82B3A1F7CDE2D000CAEE5 /* Views */,
+				D2D82B391F7CDE24000CAEE5 /* Controllers */,
+				D2D82B3E1F7CDE51000CAEE5 /* Supporting Files */,
+			);
+			path = SampleAlamofireMapper;
+			sourceTree = "<group>";
+		};
+		D2D82B391F7CDE24000CAEE5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2D82B3F1F7CDE84000CAEE5 /* SearchViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D2D82B3A1F7CDE2D000CAEE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D2D82B3B1F7CDE33000CAEE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D2D82B3C1F7CDE3B000CAEE5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		D2D82B3D1F7CDE46000CAEE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D2D82B3E1F7CDE51000CAEE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				D2D82B2B1F7CDD28000CAEE5 /* Main.storyboard */,
 				D2D82B2E1F7CDD28000CAEE5 /* Assets.xcassets */,
 				D2D82B301F7CDD28000CAEE5 /* LaunchScreen.storyboard */,
 				D2D82B331F7CDD28000CAEE5 /* Info.plist */,
 			);
-			path = SampleAlamofireMapper;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D9A47CE195BD78C5C8ED8792 /* Pods */ = {
@@ -226,9 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D82B2A1F7CDD28000CAEE5 /* SecondViewController.swift in Sources */,
+				D2D82B401F7CDE84000CAEE5 /* SearchViewController.swift in Sources */,
 				D2D82B261F7CDD28000CAEE5 /* AppDelegate.swift in Sources */,
-				D2D82B281F7CDD28000CAEE5 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +436,7 @@
 				D2D82B381F7CDD28000CAEE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
