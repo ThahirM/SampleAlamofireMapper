@@ -16,6 +16,7 @@
 		D2D82B451F7CE01A000CAEE5 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B441F7CE01A000CAEE5 /* Requestable.swift */; };
 		D2D82B471F7CE0C3000CAEE5 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B461F7CE0C3000CAEE5 /* BaseObject.swift */; };
 		D2D82B491F7CE19B000CAEE5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B481F7CE19B000CAEE5 /* Track.swift */; };
+		D2D82B4B1F7CE518000CAEE5 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B4A1F7CE518000CAEE5 /* TrackCell.swift */; };
 		F30AAE2912DACC63F5ECAD1B /* Pods_SampleAlamofireMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD6A0DD14BA81DAAC52D07D /* Pods_SampleAlamofireMapper.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		D2D82B441F7CE01A000CAEE5 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		D2D82B461F7CE0C3000CAEE5 /* BaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
 		D2D82B481F7CE19B000CAEE5 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		D2D82B4A1F7CE518000CAEE5 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		E374D42B2B145237798AFE60 /* Pods-SampleAlamofireMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAlamofireMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleAlamofireMapper/Pods-SampleAlamofireMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		D2D82B3A1F7CDE2D000CAEE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2D82B4A1F7CE518000CAEE5 /* TrackCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D82B4B1F7CE518000CAEE5 /* TrackCell.swift in Sources */,
 				D2D82B401F7CDE84000CAEE5 /* TracksViewController.swift in Sources */,
 				D2D82B471F7CE0C3000CAEE5 /* BaseObject.swift in Sources */,
 				D2D82B451F7CE01A000CAEE5 /* Requestable.swift in Sources */,
