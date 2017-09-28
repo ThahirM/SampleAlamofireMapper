@@ -21,3 +21,24 @@ class Track: Object {
         trackImage <- map["artworkUrl100"]
     }
 }
+
+extension Track {
+    enum Router: Requestable {
+        
+        case search(with: String)
+        
+        var method: Alamofire.HTTPMethod {
+            return .get
+        }
+        
+        var path: String {
+            return "search"
+        }
+        
+        var parameters: Parameters? {
+            switch self {
+            case .search(let searchKey): return ["term": searchKey, "media": "music"]
+            }
+        }
+    }
+}
