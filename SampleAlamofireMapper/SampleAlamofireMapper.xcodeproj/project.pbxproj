@@ -12,6 +12,9 @@
 		D2D82B2F1F7CDD28000CAEE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B2E1F7CDD28000CAEE5 /* Assets.xcassets */; };
 		D2D82B321F7CDD28000CAEE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B301F7CDD28000CAEE5 /* LaunchScreen.storyboard */; };
 		D2D82B401F7CDE84000CAEE5 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B3F1F7CDE84000CAEE5 /* TracksViewController.swift */; };
+		D2D82B431F7CDFCE000CAEE5 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B421F7CDFCE000CAEE5 /* ServiceManager.swift */; };
+		D2D82B451F7CE01A000CAEE5 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B441F7CE01A000CAEE5 /* Requestable.swift */; };
+		D2D82B471F7CE0C3000CAEE5 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B461F7CE0C3000CAEE5 /* BaseObject.swift */; };
 		F30AAE2912DACC63F5ECAD1B /* Pods_SampleAlamofireMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD6A0DD14BA81DAAC52D07D /* Pods_SampleAlamofireMapper.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		D2D82B311F7CDD28000CAEE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2D82B331F7CDD28000CAEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2D82B3F1F7CDE84000CAEE5 /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
+		D2D82B421F7CDFCE000CAEE5 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		D2D82B441F7CE01A000CAEE5 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		D2D82B461F7CE0C3000CAEE5 /* BaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
 		E374D42B2B145237798AFE60 /* Pods-SampleAlamofireMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAlamofireMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleAlamofireMapper/Pods-SampleAlamofireMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +111,9 @@
 		D2D82B3C1F7CDE3B000CAEE5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D2D82B411F7CDF6C000CAEE5 /* Service Manager */,
+				D2D82B441F7CE01A000CAEE5 /* Requestable.swift */,
+				D2D82B461F7CE0C3000CAEE5 /* BaseObject.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -125,6 +134,14 @@
 				D2D82B331F7CDD28000CAEE5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2D82B411F7CDF6C000CAEE5 /* Service Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D2D82B421F7CDFCE000CAEE5 /* ServiceManager.swift */,
+			);
+			name = "Service Manager";
 			sourceTree = "<group>";
 		};
 		D9A47CE195BD78C5C8ED8792 /* Pods */ = {
@@ -272,7 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D82B401F7CDE84000CAEE5 /* TracksViewController.swift in Sources */,
+				D2D82B471F7CE0C3000CAEE5 /* BaseObject.swift in Sources */,
+				D2D82B451F7CE01A000CAEE5 /* Requestable.swift in Sources */,
 				D2D82B261F7CDD28000CAEE5 /* AppDelegate.swift in Sources */,
+				D2D82B431F7CDFCE000CAEE5 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
