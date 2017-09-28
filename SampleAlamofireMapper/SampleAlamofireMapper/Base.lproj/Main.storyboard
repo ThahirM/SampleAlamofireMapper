@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Search-->
+        <!--Tracks-->
         <scene sceneID="Kye-jk-gIe">
             <objects>
-                <tableViewController id="W9m-Et-Ck2" customClass="SearchViewController" customModule="SampleAlamofireMapper" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="W9m-Et-Ck2" customClass="TracksViewController" customModule="SampleAlamofireMapper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9aC-tG-qIU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,17 +71,17 @@
                             <outlet property="delegate" destination="W9m-Et-Ck2" id="Ma7-bZ-1gd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="fTz-Hx-IRD"/>
+                    <navigationItem key="navigationItem" title="Tracks" id="fTz-Hx-IRD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fq-9y-6QM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1588" y="0.0"/>
         </scene>
-        <!--Search-->
+        <!--Tracks-->
         <scene sceneID="zaQ-Vt-fVs">
             <objects>
                 <navigationController id="Loh-MQ-Jbu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="WhM-qj-Oan"/>
+                    <tabBarItem key="tabBarItem" title="Tracks" id="WhM-qj-Oan"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oq1-ax-6HC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

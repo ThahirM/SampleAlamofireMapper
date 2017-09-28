@@ -11,7 +11,7 @@
 		D2D82B2D1F7CDD28000CAEE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B2B1F7CDD28000CAEE5 /* Main.storyboard */; };
 		D2D82B2F1F7CDD28000CAEE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B2E1F7CDD28000CAEE5 /* Assets.xcassets */; };
 		D2D82B321F7CDD28000CAEE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B301F7CDD28000CAEE5 /* LaunchScreen.storyboard */; };
-		D2D82B401F7CDE84000CAEE5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B3F1F7CDE84000CAEE5 /* SearchViewController.swift */; };
+		D2D82B401F7CDE84000CAEE5 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B3F1F7CDE84000CAEE5 /* TracksViewController.swift */; };
 		F30AAE2912DACC63F5ECAD1B /* Pods_SampleAlamofireMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD6A0DD14BA81DAAC52D07D /* Pods_SampleAlamofireMapper.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		D2D82B2E1F7CDD28000CAEE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2D82B311F7CDD28000CAEE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2D82B331F7CDD28000CAEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2D82B3F1F7CDE84000CAEE5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D2D82B3F1F7CDE84000CAEE5 /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		E374D42B2B145237798AFE60 /* Pods-SampleAlamofireMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAlamofireMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleAlamofireMapper/Pods-SampleAlamofireMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,7 @@
 		D2D82B391F7CDE24000CAEE5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D2D82B3F1F7CDE84000CAEE5 /* SearchViewController.swift */,
+				D2D82B3F1F7CDE84000CAEE5 /* TracksViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D82B401F7CDE84000CAEE5 /* SearchViewController.swift in Sources */,
+				D2D82B401F7CDE84000CAEE5 /* TracksViewController.swift in Sources */,
 				D2D82B261F7CDD28000CAEE5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
