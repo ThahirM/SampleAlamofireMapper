@@ -1,5 +1,5 @@
 //
-//  BaseObject.swift
+//  BaseMappable.swift
 //  SampleAlamofireMapper
 //
 //  Created by Thahir Maheen on 28-9-17.
@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class Object: Mappable {
+class BaseMappable: Mappable {
     required init?(map: Map) {}
     func mapping(map: Map) {}
 }

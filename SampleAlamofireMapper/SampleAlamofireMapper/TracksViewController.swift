@@ -10,6 +10,15 @@ import PromiseKit
 
 class TracksViewController: UITableViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchStoredTracks()
+    }
+    
+    func fetchStoredTracks() {
+        tracks = Track.getTracks()
+    }
+    
     fileprivate var tracks = [Track]() {
         didSet {
             tableView?.reloadData()
@@ -25,6 +34,7 @@ class TracksViewController: UITableViewController {
         cell.track = tracks[indexPath.row]
         return cell
     }
+    
 }
 
 extension TracksViewController: UISearchBarDelegate {

@@ -9,12 +9,19 @@
 import ObjectMapper
 import Alamofire
 import PromiseKit
+import RealmSwift
+import ObjectMapper_Realm
+import Realm
 
-class Track: Object {
+class Track: BaseRealmMapper {
+
+    override static func primaryKey() -> String? {
+        return "trackImage"
+    }
     
-    var trackName = ""
-    var trackCollectionName = ""
-    var trackImage = ""
+    dynamic var trackName = ""
+    dynamic var trackCollectionName = ""
+    dynamic var trackImage = ""
     
     override func mapping(map: Map) {
         trackName <- map["trackName"]
@@ -22,6 +29,7 @@ class Track: Object {
         trackImage <- map["artworkUrl100"]
     }
 }
+
 
 extension Track {
     enum Router: Requestable {
@@ -42,20 +50,23 @@ extension Track {
             }
         }
     }
-}
-
-extension Track {
-    class SearchResponse: Object {
-        
-        var count = 0
-        var tracks: [Track]?
-        
-        override func mapping(map: Map) {
-            count <- map["resultCount"]
-            tracks <- map["results"]
-        }
+    
+   class func getTracks() -> [Track] {
+        return RealmManager.shared.get(type: Track.self)
     }
 }
+
+class SearchResponse: BaseMappable {
+    
+    var count = 0
+    var tracks = [Track]()
+    
+   override func mapping(map: Map) {
+        count  <- map["resultCount"]
+        tracks <- (map["results"])
+    }
+}
+
 
 extension Track {
     static func search(with key: String) -> Promise<[Track]> {
@@ -67,12 +78,15 @@ extension Track {
                     return
                 }
                 
-                guard let tracks = response.value?.tracks else {
+                guard let tracksRealm = response.value?.tracks else {
                     let error = NSError(domain: "JSONResponseError", code: 3841, userInfo: nil)
                     reject(error)
                     return
                 }
-                
+                RealmManager.shared.addObjects(objects: Array(tracksRealm))
+                print(tracksRealm)
+                var tracks = [Track]()
+                tracks.append(contentsOf: tracksRealm)
                 fulfil(tracks)
             }
         }
