@@ -6,82 +6,100 @@
 //  Copyright © 2018 Thahir. All rights reserved.
 //
 
-import Foundation
 import Realm
 import RealmSwift
 
 class RealmManager {
     
-    // singleton
+    /// Shared Realm Manager
     static let shared = RealmManager()
     private init() {}
     
-    private let realm = try? Realm()
+    let realm = try? Realm()
     
-    func get<Object: BaseRealmMapper>(type: Object.Type) -> [Object] {
-        var objects = [Object]()
-        guard let realmObjects = realm?.objects(type) else {
-            return objects
-        }
-        objects.append(contentsOf: realmObjects)
-        return objects
+    /// Fetch objects of a specific type from realm
+    func fetch<Object: MappableRealmObject>(type: Object.Type) -> [Object] {
+        return realm?.objects(type).toArray(type) ?? []
     }
     
-    func deleteObject(object:Object) {
+    /// Add an object to realm
+    func add(object: MappableRealmObject, update: Bool = true) {
+        do {
+            try realm?.write {
+                realm?.add(object, update: update)
+            }
+        }
+        catch {
+            print("Failed to add \(object) due to \(error)")
+        }
+    }
+    
+    /// Add an array of objects to realm
+    func add(objects: [MappableRealmObject], update: Bool = true) {
+        do {
+            try realm?.write {
+                realm?.add(objects, update: update)
+            }
+        }
+        catch {
+            print("Failed to add \(objects) due to \(error)")
+        }
+    }
+    
+    /// Delete an object from realm
+    func delete(object: MappableRealmObject) {
         do {
             try realm?.write {
                 realm?.delete(object)
             }
         }
-        catch let error as NSError {
-            //TODO: Handle error
-            print(error)
+        catch {
+            print("Failed to delete \(object) due to \(error)")
         }
     }
     
-    func deleteObjects(objects:[Object]) {
+    /// Delete an array of objects from realm
+    func delete(objects: [MappableRealmObject]) {
         do {
             try realm?.write {
                 realm?.delete(objects)
             }
         }
-        catch let error as NSError {
-            //TODO: Handle error
-            print(error)
+        catch {
+            print("Failed to delete \(objects) due to \(error)")
         }
     }
     
-    func addObject(object:Object,update:Bool = true) {
-        do {
-            try realm?.write {
-                realm?.add(object, update: update)
-            }
-        } catch let error as NSError {
-            //TODO: Handle error
-            print(error)
-        }
-    }
-    
-    func addObjects(objects:[Object],update:Bool = true) {
-        do {
-            try realm?.write {
-                realm?.add(objects, update: update)
-            }
-        } catch let error as NSError {
-            //TODO: Handle error
-            print(error)
-        }
-    }
-    
-    func deleteAll() {
+    /// Clear the realm database
+    func clearDataBase() {
         do {
             try realm?.write {
                 realm?.deleteAll()
             }
         }
-        catch let error as NSError {
-            //TODO: Handle error
-            print(error)
+        catch {
+            print("Failed to clear DataBase due to \(error)")
         }
+    }
+}
+
+extension Results {
+    
+    /// Convert results into array
+    func toArray<Object: MappableRealmObject>(_ type: Object.Type) -> [Object] {
+        return compactMap { $0 as? Object }
+    }
+}
+
+extension Array where Element: MappableRealmObject {
+    
+    /// Add objects to realm
+    func addToRealm(update: Bool = true) {
+        RealmManager.shared.add(objects: self, update: true)
+    }
+    
+    /// Delete objects from realm
+    func deleteFromRealm() {
+        RealmManager.shared.delete(objects: self)
     }
 }

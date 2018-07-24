@@ -28,7 +28,9 @@ class ServiceManager {
 extension ServiceManager {
     struct API {
         static var baseUrl: URL {
-            return URL(string: "http://itunes.apple.com") ?? URL(fileURLWithPath: "")
+//            return URL(string: "http://itunes.apple.com") ?? URL(fileURLWithPath: "")
+            return URL(string: "http://10.10.10.158:9111/api/v2") ?? URL(fileURLWithPath: "")
+//            http://10.10.10.158:9111/api/v2/guides?locale=en&api_key=fbe941dc3964ef44b24514e5e5df0eda7653cddf
         }
     }
 }

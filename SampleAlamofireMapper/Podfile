@@ -5,6 +5,5 @@ target 'SampleAlamofireMapper' do
     pod 'ObjectMapper',             '~> 2.2'
     pod 'PromiseKit',               '~> 4.0'
     pod 'AlamofireObjectMapper',    '~> 4.0'
-    pod 'RealmSwift'
-    pod 'ObjectMapper+Realm', '~> 0.6'
+    pod 'ObjectMapper+Realm',       '~> 0.6'
 end

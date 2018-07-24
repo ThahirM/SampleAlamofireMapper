@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0CC9D96A2100BC6B00412962 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9D9692100BC6B00412962 /* RealmManager.swift */; };
-		0CE1102B2105FFE3000185F0 /* BaseRealmMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1102A2105FFE3000185F0 /* BaseRealmMapper.swift */; };
 		D2D82B261F7CDD28000CAEE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B251F7CDD28000CAEE5 /* AppDelegate.swift */; };
 		D2D82B2D1F7CDD28000CAEE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B2B1F7CDD28000CAEE5 /* Main.storyboard */; };
 		D2D82B2F1F7CDD28000CAEE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D82B2E1F7CDD28000CAEE5 /* Assets.xcassets */; };
@@ -19,12 +18,12 @@
 		D2D82B471F7CE0C3000CAEE5 /* BaseMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B461F7CE0C3000CAEE5 /* BaseMappable.swift */; };
 		D2D82B491F7CE19B000CAEE5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B481F7CE19B000CAEE5 /* Track.swift */; };
 		D2D82B4B1F7CE518000CAEE5 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D82B4A1F7CE518000CAEE5 /* TrackCell.swift */; };
+		D2DD729A21074A4B00FB2396 /* OffRoadingTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD729921074A4B00FB2396 /* OffRoadingTip.swift */; };
 		F30AAE2912DACC63F5ECAD1B /* Pods_SampleAlamofireMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD6A0DD14BA81DAAC52D07D /* Pods_SampleAlamofireMapper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CC9D9692100BC6B00412962 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		0CE1102A2105FFE3000185F0 /* BaseRealmMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmMapper.swift; sourceTree = "<group>"; };
 		66FE10527840DF1BBFE0B73B /* Pods-SampleAlamofireMapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAlamofireMapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleAlamofireMapper/Pods-SampleAlamofireMapper.release.xcconfig"; sourceTree = "<group>"; };
 		9CD6A0DD14BA81DAAC52D07D /* Pods_SampleAlamofireMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleAlamofireMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D82B221F7CDD28000CAEE5 /* SampleAlamofireMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAlamofireMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +38,7 @@
 		D2D82B461F7CE0C3000CAEE5 /* BaseMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMappable.swift; sourceTree = "<group>"; };
 		D2D82B481F7CE19B000CAEE5 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		D2D82B4A1F7CE518000CAEE5 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		D2DD729921074A4B00FB2396 /* OffRoadingTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffRoadingTip.swift; sourceTree = "<group>"; };
 		E374D42B2B145237798AFE60 /* Pods-SampleAlamofireMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAlamofireMapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleAlamofireMapper/Pods-SampleAlamofireMapper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				D2D82B481F7CE19B000CAEE5 /* Track.swift */,
+				D2DD729921074A4B00FB2396 /* OffRoadingTip.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -124,7 +125,6 @@
 				D2D82B411F7CDF6C000CAEE5 /* Service Manager */,
 				D2D82B441F7CE01A000CAEE5 /* Requestable.swift */,
 				D2D82B461F7CE0C3000CAEE5 /* BaseMappable.swift */,
-				0CE1102A2105FFE3000185F0 /* BaseRealmMapper.swift */,
 				0CC9D9692100BC6B00412962 /* RealmManager.swift */,
 			);
 			name = Components;
@@ -293,12 +293,12 @@
 				D2D82B4B1F7CE518000CAEE5 /* TrackCell.swift in Sources */,
 				0CC9D96A2100BC6B00412962 /* RealmManager.swift in Sources */,
 				D2D82B401F7CDE84000CAEE5 /* TracksViewController.swift in Sources */,
+				D2DD729A21074A4B00FB2396 /* OffRoadingTip.swift in Sources */,
 				D2D82B471F7CE0C3000CAEE5 /* BaseMappable.swift in Sources */,
 				D2D82B451F7CE01A000CAEE5 /* Requestable.swift in Sources */,
 				D2D82B261F7CDD28000CAEE5 /* AppDelegate.swift in Sources */,
 				D2D82B431F7CDFCE000CAEE5 /* ServiceManager.swift in Sources */,
 				D2D82B491F7CE19B000CAEE5 /* Track.swift in Sources */,
-				0CE1102B2105FFE3000185F0 /* BaseRealmMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -409,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

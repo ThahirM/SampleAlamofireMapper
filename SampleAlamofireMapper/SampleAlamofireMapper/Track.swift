@@ -13,7 +13,7 @@ import RealmSwift
 import ObjectMapper_Realm
 import Realm
 
-class Track: BaseRealmMapper {
+class Track: MappableRealmObject {
 
     override static func primaryKey() -> String? {
         return "trackImage"
@@ -50,20 +50,16 @@ extension Track {
             }
         }
     }
-    
-   class func getTracks() -> [Track] {
-        return RealmManager.shared.get(type: Track.self)
-    }
 }
 
-class SearchResponse: BaseMappable {
+class SearchResponse: MappableObject {
     
     var count = 0
     var tracks = [Track]()
     
    override func mapping(map: Map) {
         count  <- map["resultCount"]
-        tracks <- (map["results"])
+        tracks <- map["results"]
     }
 }
 
@@ -73,20 +69,22 @@ extension Track {
         return Promise { (fulfil, reject) in
             Router.search(with: key).request { (response: DataResponse<SearchResponse>) in
                 
+                // handle errors if any
                 guard response.error == nil else {
                     reject(response.error!)
                     return
                 }
                 
-                guard let tracksRealm = response.value?.tracks else {
+                // abort if we got unexpected result
+                guard let tracks = response.value?.tracks else {
                     let error = NSError(domain: "JSONResponseError", code: 3841, userInfo: nil)
                     reject(error)
                     return
                 }
-                RealmManager.shared.addObjects(objects: Array(tracksRealm))
-                print(tracksRealm)
-                var tracks = [Track]()
-                tracks.append(contentsOf: tracksRealm)
+                
+                // save tracks
+                tracks.addToRealm()
+                
                 fulfil(tracks)
             }
         }
