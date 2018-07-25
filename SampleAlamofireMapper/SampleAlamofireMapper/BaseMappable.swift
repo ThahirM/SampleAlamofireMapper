@@ -16,9 +16,9 @@ class MappableObject: Mappable {
     func mapping(map: Map) {}
 }
 
-protocol RealmCaching {}
+protocol Caching {}
 
-class MappableRealmObject: Object, Mappable, RealmCaching {
+class MappableRealmObject: Object, Mappable, Caching {
     
     required init() {
         super.init()
@@ -39,23 +39,40 @@ class MappableRealmObject: Object, Mappable, RealmCaching {
     func mapping(map: Map) {}
 }
 
-extension RealmCaching where Self: MappableRealmObject {
+extension Caching where Self: MappableRealmObject {
     
+    /// Fetch all cached objects of this type
     static func cached() -> [Self] {
         return RealmManager.shared.fetch(type: self)
     }
     
+    /// Add this object to realm
     func add(update: Bool = true) {
         RealmManager.shared.add(object: self, update: update)
     }
     
+    /// Delete this object from realm
     func delete() {
         RealmManager.shared.delete(object: self)
     }
     
+    /// Update the object inside update handler
     func update(updateHandler: (Self) -> Void) {
         try? RealmManager.shared.realm?.write {
             updateHandler(self)
         }
+    }
+}
+
+extension Array: Caching where Element: MappableRealmObject {
+    
+    /// Add objects to realm
+    func addToRealm(update: Bool = true) {
+        RealmManager.shared.add(objects: self, update: true)
+    }
+    
+    /// Delete objects from realm
+    func deleteFromRealm() {
+        RealmManager.shared.delete(objects: self)
     }
 }

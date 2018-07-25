@@ -90,16 +90,3 @@ extension Results {
         return compactMap { $0 as? Object }
     }
 }
-
-extension Array where Element: MappableRealmObject {
-    
-    /// Add objects to realm
-    func addToRealm(update: Bool = true) {
-        RealmManager.shared.add(objects: self, update: true)
-    }
-    
-    /// Delete objects from realm
-    func deleteFromRealm() {
-        RealmManager.shared.delete(objects: self)
-    }
-}
